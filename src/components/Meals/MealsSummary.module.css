@@ -15,5 +15,14 @@
 .summary h2 {
   font-size: 2rem;
   margin-top: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
 }
- 
+
+.summary p {
+  font-size: 1.1rem;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(230, 228, 228);
+}
+
