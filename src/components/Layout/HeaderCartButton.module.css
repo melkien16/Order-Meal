@@ -31,7 +31,8 @@
   font-weight: bold;
 }
 
-.button:hover .badge .button:active .badge {
+.button:hover .badge,
+.button:active .badge {
   background-color: #92320c;
 }
 
