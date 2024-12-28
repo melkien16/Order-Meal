@@ -48,14 +48,13 @@ const Checkout = (props) => {
       return;
     }
 
-
-
     const userData = {
       name: enteredName,
       street: enteredStreet,
       postal: enteredPostal,
       city: enteredCity,
     };
+    props.onConfirm(userData);
   };
 
   const nameControlClasses = `${classes.control} ${
