@@ -1,8 +1,13 @@
 import classes from "./Checkout.module.css";
 
 const Checkout = (props) => {
+  const confirmHandler = (event) => {
+    event.preventDefault();
+    console.log("Confirming order...");
+  };
+
   return (
-    <form action="">
+    <form onSubmit={confirmHandler} className={classes.form}>
       <div className={classes.control}>
         <label htmlFor="name">Your Name</label>
         <input type="text" id="name" />
@@ -19,10 +24,12 @@ const Checkout = (props) => {
         <label htmlFor="city">City</label>
         <input type="text" id="city" />
       </div>
-      <button type="button" onClick={props.onCancel}>Cancel</button>
-      <button type="button" className={classes.submit}>
-        Confirm
-      </button>
+      <div className={classes.actions}>
+        <button type="button" onClick={props.onCancel} className={classes["button--alt"]}>Cancel</button>
+        <button className={classes.button}>
+          Confirm
+        </button>
+      </div>
     </form>
   );
 };
